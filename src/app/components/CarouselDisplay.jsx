@@ -29,8 +29,8 @@ export default function CarouselDisplay({ items }) {
                 width={1600}
                 height={900}
                 style={{
-                  maxWidth: '100%',
-                  maxHeight: '100%',
+                  maxWidth: '90vw',
+                  maxHeight: '90vh',
                   width: 'auto',
                   height: 'auto',
                 }}

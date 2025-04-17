@@ -39,3 +39,53 @@ nav > a {
   height: calc(100vh - 50px);
   margin-top: 50px;
 }
+
+.carousel-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-click-left,
+.carousel-click-right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+}
+
+.carousel-click-left {
+  left: 0;
+  cursor: url('/cursor-left.svg'), pointer;
+}
+
+.carousel-click-right {
+  right: 0;
+  cursor: url('/cursor-right.svg'), pointer;
+}
+
+.contentWindow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carouselImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+}
+
+.loading {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: red; */
+}
+
+.loading > h1 {
+  font-size: 10rem;
+}

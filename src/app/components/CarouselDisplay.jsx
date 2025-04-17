@@ -1,8 +1,8 @@
 'use client';
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,39 +12,19 @@ import contentfulLoader from '@/app/components/contentfulImageLoader';
 export default function CarouselDisplay({ items }) {
   const swiperRef = useRef(null);
   return (
-    <section
-      className='carousel'
-      style={{
-        width: '100vw',
-        height: 'calc(100vh - 50px)',
-        marginTop: '50px',
-      }}
-    >
-      <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+    <section className='carousel'>
+      <div className='carousel-wrapper'>
         <div
-          style={{
-            position: 'absolute',
-            left: 0,
-            top: 0,
-            width: '50%',
-            height: '100%',
-            zIndex: 10,
-          }}
+          className='carousel-click-left'
           onClick={() => swiperRef.current?.slidePrev()}
         />
         <div
-          style={{
-            position: 'absolute',
-            right: 0,
-            top: 0,
-            width: '50%',
-            height: '100%',
-            zIndex: 10,
-          }}
+          className='carousel-click-right'
           onClick={() => swiperRef.current?.slideNext()}
         />
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination, Keyboard]}
+          keyboard={{ enabled: true }}
           loop
           className='carousel'
           onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -70,16 +50,10 @@ export default function CarouselDisplay({ items }) {
                       alt='media'
                       width={1600}
                       height={900}
-                      style={{
-                        maxWidth: '90vw',
-                        maxHeight: '90vh',
-                        width: 'auto',
-                        height: 'auto',
-                      }}
                     />
                   )}
                   <p className='custom-legend'>
-                    {post.fields.companyName} {post.fields.details}
+                    {post.fields.companyName} - {post.fields.details}
                   </p>
                 </div>
               </SwiperSlide>

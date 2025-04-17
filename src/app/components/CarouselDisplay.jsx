@@ -17,30 +17,41 @@ export default function CarouselDisplay({ items }) {
         dynamicHeight
         emulateTouch
       >
-        {items.map((post) => (
-          <>
+        {items.map((post) => {
+          const file = post.fields.media.fields.file;
+          const contentType = file.contentType;
+
+          const isVideo = contentType.startsWith('video');
+
+          return (
             <div className='contentWindow' key={post.sys.id}>
-              <Image
-                key={post.sys.id}
-                className='carouselImage'
-                loader={contentfulLoader}
-                src={`https:${post.fields.media.fields.file.url}`}
-                alt='media'
-                width={1600}
-                height={900}
-                style={{
-                  maxWidth: '90vw',
-                  maxHeight: '90vh',
-                  width: 'auto',
-                  height: 'auto',
-                }}
-              />
-              {/* <p className='legend'>
+              {isVideo ? (
+                <video className='carouselVideo' autoPlay muted loop>
+                  <source src={`https:${file.url}`} type={contentType} />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <Image
+                  className='carouselImage'
+                  loader={contentfulLoader}
+                  src={`https:${file.url}`}
+                  alt='media'
+                  width={1600}
+                  height={900}
+                  style={{
+                    maxWidth: '90vw',
+                    maxHeight: '90vh',
+                    width: 'auto',
+                    height: 'auto',
+                  }}
+                />
+              )}
+              <p className='custom-legend'>
                 {post.fields.companyName} {post.fields.details}
-              </p> */}
+              </p>
             </div>
-          </>
-        ))}
+          );
+        })}
       </Carousel>
     </section>
   );

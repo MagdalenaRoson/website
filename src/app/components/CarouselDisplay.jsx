@@ -2,10 +2,11 @@
 import { useRef } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Keyboard } from 'swiper/modules';
+import { Pagination, Keyboard, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 import Image from 'next/image';
 import contentfulLoader from '@/app/components/contentfulImageLoader';
 
@@ -23,13 +24,15 @@ export default function CarouselDisplay({ items }) {
           onClick={() => swiperRef.current?.slideNext()}
         />
         <Swiper
-          modules={[Pagination, Keyboard]}
+          modules={[Pagination, Keyboard, EffectFade]}
+          effect='fade'
+          fadeEffect={{ crossFade: true }}
           keyboard={{ enabled: true }}
           loop
           className='carousel'
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {items.map((post) => {
+          {items.map((post, index) => {
             const file = post.fields.media.fields.file;
             const contentType = file.contentType;
             const isVideo = contentType.startsWith('video');
@@ -52,8 +55,12 @@ export default function CarouselDisplay({ items }) {
                       height={900}
                     />
                   )}
-                  <p className='custom-legend'>
-                    {post.fields.companyName} - {post.fields.details}
+                  <div className='customLegend'>
+                    <p className='assetCompany'>{post.fields.companyName}</p>
+                    <p className='assetDetails'>{post.fields.details}</p>
+                  </div>
+                  <p className='counter'>
+                    {index + 1} / {items.length}
                   </p>
                 </div>
               </SwiperSlide>

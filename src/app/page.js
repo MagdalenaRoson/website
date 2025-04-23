@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import client from './lib/contenful';
+import Navbar from './components/navbar';
 import { fetchEntries } from '@/app/lib/contenful';
 import CarouselDisplay from '@/app/components/CarouselDisplay';
 
@@ -11,10 +12,7 @@ export default async function Home() {
 
   return (
     <>
-      <nav>
-        <Link href={'/'}>Home</Link>
-        <Link href={'/information'}>Information</Link>
-      </nav>
+      <Navbar />
       <CarouselDisplay items={assets} />
     </>
   );

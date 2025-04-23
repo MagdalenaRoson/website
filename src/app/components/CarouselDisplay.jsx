@@ -60,7 +60,7 @@ export default function CarouselDisplay({ items }) {
                     <p className='assetDetails'>{post.fields.details}</p>
                   </div>
                   <p className='counter'>
-                    {index + 1} / {items.length}
+                    {index + 1} of {items.length}
                   </p>
                 </div>
               </SwiperSlide>

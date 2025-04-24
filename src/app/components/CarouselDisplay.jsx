@@ -41,7 +41,13 @@ export default function CarouselDisplay({ items }) {
                 <div className='contentWindow'>
                   <div className='mediaWrapper'>
                     {isVideo ? (
-                      <video className='carouselVideo' autoPlay muted loop>
+                      <video
+                        className='carouselVideo'
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      >
                         <source src={`https:${file.url}`} type={contentType} />
                         Your browser does not support the video tag.
                       </video>

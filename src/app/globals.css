@@ -1,12 +1,20 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: BradfordLL-Light;
-  src: url('/BradfordLL-Light.otf');
+  font-family: BradfordLL-MediumItalic;
+  src: url('/BradfordLL-MediumItalic.otf');
+}
+@font-face {
+  font-family: BradfordLL-RegularItalic;
+  src: url('/BradfordLL-RegularItalic.otf');
+}
+@font-face {
+  font-family: BradfordLL-Regular;
+  src: url('/BradfordLL-Regular.otf');
 }
 
 body {
-  font-family: 'BradfordLL-Light', sans-serif;
+  font-family: 'BradfordLL-MediumItalic', sans-serif;
   overflow-x: hidden;
 }
 
@@ -22,14 +30,14 @@ body.no-scroll {
 
 html,
 body {
-  height: 100%;
+  /* height: 100vh; */
   margin: 0;
   padding: 0;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -38,13 +46,14 @@ nav {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 nav > a {
-  margin: 0 5px;
+  margin: 0 25px;
   align-self: center;
   color: black;
+  letter-spacing: 0.13rem;
 }
 
 .carousel {
@@ -79,57 +88,82 @@ nav > a {
 }
 
 .contentWindow {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   position: relative;
-}
-
-.counter {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  max-width: 1400px;
 }
 
 .carouselImage {
-  max-width: 90vw;
-  max-height: 90vh;
   width: auto;
   height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.carouselVideo {
+  width: auto;
+  height: auto;
+  max-width: 100vw;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.counter {
+  font-size: 2rem;
 }
 
 .customLegend {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  text-align: right;
   font-size: 0.8rem;
+  font-family: 'BradfordLL-RegularItalic', sans-serif;
+  text-align: right;
+}
+
+.mediaMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.legendContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 90vw;
+  margin-top: 10px;
 }
 
 .loading {
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .loading > h1 {
-  font-size: 10rem;
+  font-size: 2rem;
   text-align: center;
+  letter-spacing: 0.13rem;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  height: calc(100vh - 50px);
-}
-
-.aboutSection {
-  font-style: italic;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 0;
+  gap: 40px;
+  position: relative;
 }
 
 .aboutSection,
@@ -137,6 +171,7 @@ main {
   max-width: 450px;
   text-align: justify;
   padding: 20px;
+  align-self: flex-start;
 }
 
 .contactDetails {
@@ -145,5 +180,29 @@ main {
 
 .label {
   font-size: 0.8rem;
-  font-style: italic;
+  font-family: BradfordLL-Regular;
+}
+
+.mediaWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  max-width: 90vw;
+}
+
+.informationWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.informationPage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

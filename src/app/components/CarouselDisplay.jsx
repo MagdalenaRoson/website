@@ -25,7 +25,6 @@ export default function CarouselDisplay({ items }) {
         />
         <Swiper
           modules={[Pagination, Keyboard, EffectFade]}
-          effect='fade'
           fadeEffect={{ crossFade: true }}
           keyboard={{ enabled: true }}
           loop

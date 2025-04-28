@@ -42,7 +42,7 @@ export default function CarouselDisplay({ items }) {
                   <div className='mediaWrapper'>
                     {isVideo ? (
                       <video
-                        className='carouselVideo'
+                        className='carouselImage'
                         autoPlay
                         muted
                         loop
@@ -57,8 +57,8 @@ export default function CarouselDisplay({ items }) {
                         loader={contentfulLoader}
                         src={`https:${file.url}`}
                         alt='media'
-                        width={1200}
-                        height={900}
+                        width={2050}
+                        height={1000}
                       />
                     )}
                     <div className='mediaMeta'>

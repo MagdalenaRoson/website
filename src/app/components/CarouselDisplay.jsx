@@ -28,6 +28,7 @@ export default function CarouselDisplay({ items }) {
           fadeEffect={{ crossFade: true }}
           keyboard={{ enabled: true }}
           loop
+          speed={800}
           className='carousel'
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
@@ -59,6 +60,7 @@ export default function CarouselDisplay({ items }) {
                         alt='media'
                         width={2050}
                         height={1000}
+                        priority
                       />
                     )}
                     <div className='mediaMeta'>

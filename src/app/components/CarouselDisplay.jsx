@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Keyboard, EffectFade } from 'swiper/modules';
@@ -12,6 +12,7 @@ import contentfulLoader from '@/app/components/contentfulImageLoader';
 
 export default function CarouselDisplay({ items }) {
   const swiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section className='carousel'>
       <div className='carousel-wrapper'>
@@ -28,9 +29,10 @@ export default function CarouselDisplay({ items }) {
           fadeEffect={{ crossFade: true }}
           keyboard={{ enabled: true }}
           loop
-          speed={800}
+          speed={1000}
           className='carousel'
           onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         >
           {items.map((post, index) => {
             const file = post.fields.media.fields.file;
@@ -63,23 +65,23 @@ export default function CarouselDisplay({ items }) {
                         priority
                       />
                     )}
-                    <div className='mediaMeta'>
-                      <p className='counter'>
-                        {index + 1} of {items.length}
-                      </p>
-                      <div className='customLegend'>
-                        <p className='assetCompany'>
-                          {post.fields.companyName}
-                        </p>
-                        <p className='assetDetails'>{post.fields.details}</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </SwiperSlide>
             );
           })}
         </Swiper>
+        <div className='mediaMeta staticMediaMeta'>
+          <p className='counter'>
+            {activeIndex + 1} of {items.length}
+          </p>
+          <div className='customLegend'>
+            <p className='assetCompany'>
+              {items[activeIndex].fields.companyName}
+            </p>
+            <p className='assetDetails'>{items[activeIndex].fields.details}</p>
+          </div>
+        </div>
       </div>
     </section>
   );

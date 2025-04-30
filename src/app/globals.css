@@ -128,10 +128,14 @@ nav > a {
   text-align: right;
 }
 
+.customLegend > p {
+  font-size: 0.8rem;
+}
+
 .mediaMeta {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 100%;
   margin-top: 10px;
 }

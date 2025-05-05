@@ -82,10 +82,10 @@ export default function CarouselDisplay({ items }) {
           })}
         </Swiper>
         <div className='mediaMeta'>
-          <p className={`counter ${fade ? 'fade-in' : 'fade-out'}`}>
+          <p className={`counter ${fade ? 'blur-in' : 'blur-out'}`}>
             {activeIndex + 1} of {items.length}
           </p>
-          <div className={`customLegend ${fade ? 'fade-in' : 'fade-out'}`}>
+          <div className={`customLegend ${fade ? 'blur-in' : 'blur-out'}`}>
             <p className='assetCompany'>
               {items[activeIndex].fields.companyName}
             </p>

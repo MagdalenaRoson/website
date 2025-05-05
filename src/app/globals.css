@@ -284,11 +284,30 @@ body > div > main > section.aboutSection > p {
   }
 }
 
-.fade-in {
-  opacity: 1;
-  transition: opacity 0.2s ease-in;
+@keyframes blur-in {
+  from {
+    filter: blur(8px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
 }
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.2s ease-out;
+@keyframes blur-out {
+  from {
+    filter: blur(0);
+    opacity: 1;
+  }
+  to {
+    filter: blur(8px);
+    opacity: 0;
+  }
+}
+
+.blur-in {
+  animation: blur-in 0.3s ease-out forwards;
+}
+.blur-out {
+  animation: blur-out 0.3s ease-in forwards;
 }

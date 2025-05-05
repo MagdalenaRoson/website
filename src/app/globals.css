@@ -177,6 +177,7 @@ nav > a {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+  padding-top: 85px;
 }
 
 .aboutSection {
@@ -236,6 +237,10 @@ body > div > main > section.aboutSection > p {
     max-width: 100%;
     /* height: auto; */
   }
+
+  .aboutSection {
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -251,6 +256,10 @@ body > div > main > section.aboutSection > p {
     margin: 0;
     height: auto;
     width: 100vw;
+  }
+
+  .aboutSection {
+    margin-top: 30px;
   }
 
   .aboutSection > p:nth-child(1) {
@@ -286,28 +295,39 @@ body > div > main > section.aboutSection > p {
 
 @keyframes blur-in {
   from {
-    filter: blur(8px);
-    opacity: 0;
+    filter: blur(6px);
   }
   to {
     filter: blur(0);
-    opacity: 1;
   }
 }
 @keyframes blur-out {
   from {
     filter: blur(0);
-    opacity: 1;
   }
   to {
-    filter: blur(8px);
-    opacity: 0;
+    filter: blur(6px);
   }
 }
 
 .blur-in {
-  animation: blur-in 0.3s ease-out forwards;
+  animation: blur-in 0.2s linear forwards;
 }
 .blur-out {
-  animation: blur-out 0.3s ease-in forwards;
+  animation: blur-out 0.2s linear forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-fill-mode: both;
 }

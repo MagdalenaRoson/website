@@ -50,7 +50,9 @@ export default function CarouselDisplay({ items }) {
 
             return (
               <SwiperSlide key={post.sys.id}>
-                <div className='contentWindow'>
+                <div
+                  className={`contentWindow ${index === 0 ? 'fade-in' : ''}`}
+                >
                   <div className='mediaWrapper'>
                     {isVideo ? (
                       <video

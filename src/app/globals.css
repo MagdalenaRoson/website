@@ -163,27 +163,45 @@ nav > a {
   letter-spacing: 0.13rem;
 }
 
-main {
+/* ======================================info page */
+
+.informationPage {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  padding-top: 0;
-  gap: 40px;
-  position: relative;
+  min-height: 100vh;
+  width: 100vw;
 }
 
-.aboutSection,
+.informationWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 35px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.aboutSection {
+  max-width: 50vw;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
 .contactDetailsSection {
-  max-width: 450px;
+  max-width: 50vw;
   text-align: justify;
   padding: 20px;
-  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .contactDetails {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .label {
@@ -201,35 +219,36 @@ main {
   max-width: 90vw;
 }
 
-.informationWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  height: auto;
-}
-
-.informationPage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-@media (max-width: 856px) {
-  .informationPage {
+@media (max-width: 876px) {
+  /* .informationPage {
     margin-top: 55px;
-  }
+  } */
 
+  .aboutSection,
   .contactDetailsSection {
-    width: 100%;
+    max-width: 100%;
+    /* height: auto; */
   }
 }
 
 @media (max-width: 700px) {
-  .informationPage {
-    margin-top: 55px;
+  .informationWrapper {
+    flex-direction: column;
+    width: 100vw;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .aboutSection,
+  .contactDetailsSection {
+    margin: 0;
+    height: auto;
+    width: 100vw;
+  }
+
+  .aboutSection > p:nth-child(1) {
+    margin: 55px 0 0;
+    /* width: 94vw; */
   }
 
   nav {
@@ -239,6 +258,7 @@ main {
   nav > a {
     margin: 0 10px;
     font-size: 1rem;
+    padding: 0;
   }
 
   .customLegend {

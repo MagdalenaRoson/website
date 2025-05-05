@@ -11,7 +11,7 @@ const Information = async () => {
     <div className='informationPage'>
       <main className='informationWrapper'>
         <section className='aboutSection'>
-          {about}
+          <p>{about}</p>
           <br />
           <br />
           <p className='label'>Full portfolio available upon request</p>

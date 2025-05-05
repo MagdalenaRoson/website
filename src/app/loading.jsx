@@ -1,11 +1,8 @@
 import React from 'react';
+import Loadingcomponent from './components/loadingcomponent';
 
 const loading = () => {
-  return (
-    <div className='loading'>
-      <h1>MAGDALENA ROSON</h1>
-    </div>
-  );
+  return <Loadingcomponent />;
 };
 
 export default loading;

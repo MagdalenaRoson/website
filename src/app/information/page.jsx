@@ -1,4 +1,17 @@
 import React from 'react';
+function TextWithLineBreaks({ text }) {
+  const lines = text.split(/\r?\n/);
+  return (
+    <>
+      {lines.map((line, index) => (
+        <React.Fragment key={index}>
+          {line}
+          {index < lines.length - 1 && <br />}
+        </React.Fragment>
+      ))}
+    </>
+  );
+}
 import { fetchEntries } from '@/app/lib/contenful';
 import Link from 'next/link';
 
@@ -11,44 +24,39 @@ const Information = async () => {
     <div className='informationPage'>
       <main className='informationWrapper'>
         <section className='aboutSection'>
-          <p>{about}</p>
-          <br />
-          <br />
+          <TextWithLineBreaks text={about} />
           <p className='label'>Full portfolio available upon request</p>
         </section>
 
         <section className='contactDetailsSection'>
           <div className='contactDetails'>
             <p className='label'>E-MAIL</p>
-            <p>
-              <a href={`mailto:${email}`}>{email}</a>
-            </p>
+
+            <a className='labelValue' href={`mailto:${email}`}>
+              {email}
+            </a>
           </div>
-          <div className='contactDetails'>
-            <p className='label'>ADDRESS</p>
-            <p>{address}</p>
-          </div>
+
           <div className='contactDetails'>
             <p className='label'>TELEPHONE</p>
-            <p>
-              <a href={`tel:${phone}`}>
-                +
-                {`${phone}`
-                  .split('')
-                  .map((digit, idx) => {
-                    if (idx === 2) return ` (${digit}) `;
-                    if (idx === 6) return `${digit}-`;
-                    return `${digit}`;
-                  })
-                  .join('')}
-              </a>
-            </p>
+
+            <a className='labelValue' href={`tel:${phone}`}>
+              +
+              {`${phone}`
+                .split('')
+                .map((digit, idx) => {
+                  if (idx === 2) return ` (${digit}) `;
+                  if (idx === 6) return `${digit}-`;
+                  return `${digit}`;
+                })
+                .join('')}
+            </a>
           </div>
           <div className='contactDetails'>
-            <p className='label'>SOCIAL</p>
+            <p className='label'>INSTAGRAM</p>
             {socialmediaLinks.map((link, index) => (
               <p key={index}>
-                <Link href={link} target='_blank'>
+                <Link className='labelValue' href={link} target='_blank'>
                   @{link.replace('https://instagram.com/', '')}
                 </Link>
               </p>

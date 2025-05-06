@@ -43,16 +43,16 @@ nav {
   width: 100vw;
   z-index: 100;
   margin: 0;
-  padding: 25px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 nav > a {
-  margin: 0 25px;
+  margin: 0 15px;
   align-self: center;
   color: black;
   letter-spacing: 0.13rem;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   padding: 0 10px;
 }
 
@@ -113,7 +113,7 @@ nav > a {
 }
 
 .counter {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .customLegend {
@@ -129,7 +129,7 @@ nav > a {
 .mediaMeta {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   margin-top: 10px;
   position: absolute;
@@ -173,7 +173,7 @@ nav > a {
 .informationWrapper {
   display: flex;
   flex-wrap: nowrap;
-  padding: 0 35px;
+  padding: 0 25px;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
@@ -187,7 +187,7 @@ nav > a {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .contactDetailsSection {
@@ -210,12 +210,13 @@ nav > a {
 
 .labelValue {
   font-size: 1.4rem;
+  letter-spacing: 0.15rem;
 }
 
 body > div > main > section.aboutSection > p {
   font-family: bradfordLL-RegularItalic;
   font-size: 1rem;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 .mediaWrapper {
@@ -235,11 +236,6 @@ body > div > main > section.aboutSection > p {
   .aboutSection,
   .contactDetailsSection {
     max-width: 100%;
-    /* height: auto; */
-  }
-
-  .aboutSection {
-    margin-top: 30px;
   }
 }
 
@@ -249,6 +245,7 @@ body > div > main > section.aboutSection > p {
     width: 100vw;
     justify-content: flex-start;
     padding: 0;
+    margin-top: 20px;
   }
 
   .aboutSection,
@@ -282,8 +279,6 @@ body > div > main > section.aboutSection > p {
   }
 
   .mediaMeta {
-    /* position: fixed; */
-
     bottom: 0;
     padding: 15px;
   }
@@ -292,6 +287,8 @@ body > div > main > section.aboutSection > p {
     max-width: 95vw;
   }
 }
+
+/* ANIMATIONS ************************************************************* */
 
 @keyframes blur-in {
   from {

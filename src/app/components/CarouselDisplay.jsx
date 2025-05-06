@@ -34,7 +34,7 @@ export default function CarouselDisplay({ items }) {
           fadeEffect={{ crossFade: true }}
           keyboard={{ enabled: true }}
           loop
-          speed={1000}
+          speed={800}
           className='carousel'
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChangeTransitionStart={() => setFade(false)}

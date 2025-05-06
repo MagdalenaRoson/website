@@ -304,9 +304,11 @@ body > div > main > section.aboutSection > p {
 @keyframes blur-out {
   from {
     filter: blur(0);
+    opacity: 1;
   }
   to {
     filter: blur(6px);
+    opacity: 0.3;
   }
 }
 

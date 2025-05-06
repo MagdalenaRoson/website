@@ -89,10 +89,9 @@ export default function CarouselDisplay({ items }) {
           </p>
           <div className={`customLegend ${fade ? 'blur-in' : 'blur-out'}`}>
             <p className='assetCompany'>
-              {items[activeIndex].fields.companyName} —{' '}
-              {items[activeIndex].fields.details}
+              {items[activeIndex].fields.companyName}
             </p>
-            {/* <p className='assetDetails'>{items[activeIndex].fields.details}</p> */}
+            <p className='assetDetails'>{items[activeIndex].fields.details}</p>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ const Information = async () => {
       <main className='informationWrapper'>
         <section className='aboutSection'>
           <TextWithLineBreaks text={about} />
-          <p className='label'>Full portfolio available upon request</p>
+          <p className='label'>Full portfolio available upon request.</p>
         </section>
 
         <section className='contactDetailsSection'>

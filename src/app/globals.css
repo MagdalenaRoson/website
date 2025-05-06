@@ -100,15 +100,7 @@ nav > a {
   width: auto;
   height: auto;
   max-width: 75vw;
-  max-height: 80vh;
-  object-fit: contain;
-}
-
-.carouselVideo {
-  width: auto;
-  height: auto;
-  max-width: 100vw;
-  max-height: 85vh;
+  max-height: 70vh;
   object-fit: contain;
 }
 
@@ -120,10 +112,6 @@ nav > a {
   font-size: 1rem;
   font-family: 'BradfordLL-RegularItalic', sans-serif;
   text-align: right;
-}
-
-.customLegend > p {
-  font-size: 0.8rem;
 }
 
 .mediaMeta {
@@ -187,7 +175,7 @@ nav > a {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .contactDetailsSection {
@@ -216,7 +204,7 @@ nav > a {
 body > div > main > section.aboutSection > p {
   font-family: bradfordLL-RegularItalic;
   font-size: 1rem;
-  margin: 50px 0;
+  margin: 40px 0;
 }
 
 .mediaWrapper {
@@ -227,6 +215,10 @@ body > div > main > section.aboutSection > p {
   width: fit-content;
   max-width: 90vw;
 }
+
+/* .assetCompany {
+  width: 100%;
+} */
 
 @media (max-width: 876px) {
   /* .informationPage {
@@ -264,6 +256,10 @@ body > div > main > section.aboutSection > p {
     /* width: 94vw; */
   }
 
+  .labelValue {
+    letter-spacing: 0.075rem;
+  }
+
   nav {
     padding: 10px;
   }
@@ -278,9 +274,13 @@ body > div > main > section.aboutSection > p {
     max-width: 50vw;
   }
 
+  .customLegend > p {
+    font-size: 0.6rem;
+  }
+
   .mediaMeta {
     bottom: 0;
-    padding: 15px;
+    padding: 20px;
   }
 
   .carouselImage {
@@ -292,7 +292,7 @@ body > div > main > section.aboutSection > p {
 
 @keyframes blur-in {
   from {
-    filter: blur(6px);
+    filter: blur(4px);
   }
   to {
     filter: blur(0);
@@ -304,7 +304,7 @@ body > div > main > section.aboutSection > p {
     opacity: 1;
   }
   to {
-    filter: blur(6px);
+    filter: blur(4px);
     opacity: 0.3;
   }
 }

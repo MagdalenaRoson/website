@@ -122,7 +122,9 @@ nav > a {
   margin-top: 10px;
   position: absolute;
   bottom: 0;
-  padding: 0 35px;
+  padding: 10px 35px;
+  /* bottom: 0;
+    padding: 20px; */
 }
 
 .legendContainer {
@@ -278,10 +280,10 @@ body > div > main > section.aboutSection > p {
     font-size: 0.6rem;
   }
 
-  .mediaMeta {
+  /* .mediaMeta {
     bottom: 0;
     padding: 20px;
-  }
+  } */
 
   .carouselImage {
     max-width: 95vw;

@@ -52,7 +52,7 @@ nav > a {
   align-self: center;
   color: black;
   letter-spacing: 0.13rem;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   padding: 0 10px;
 }
 
@@ -99,19 +99,22 @@ nav > a {
 .carouselImage {
   width: auto;
   height: auto;
-  max-width: 75vw;
-  max-height: 70vh;
+  max-width: 80vw;
+  max-height: 75vh;
   object-fit: contain;
 }
 
 .counter {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .customLegend {
-  font-size: 1rem;
   font-family: 'BradfordLL-RegularItalic', sans-serif;
   text-align: right;
+}
+
+.customLegend > p {
+  font-size: clamp(0.6rem, 2vw, 1rem);
 }
 
 .mediaMeta {
@@ -171,13 +174,15 @@ nav > a {
 }
 
 .aboutSection {
-  max-width: 65vw;
+  max-width: 60vw;
   height: auto;
   padding: 20px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: justify;
 }
 
 .contactDetailsSection {
@@ -267,7 +272,7 @@ body > div > main > section.aboutSection > p {
   }
 
   nav > a {
-    margin: 0 10px;
+    margin: 30px 10px;
     font-size: 1rem;
     padding: 0;
   }
@@ -276,14 +281,14 @@ body > div > main > section.aboutSection > p {
     max-width: 50vw;
   }
 
-  .customLegend > p {
+  /* .customLegend > p {
     font-size: 0.6rem;
-  }
+  } */
 
-  /* .mediaMeta {
+  .mediaMeta {
     bottom: 0;
     padding: 20px;
-  } */
+  }
 
   .carouselImage {
     max-width: 95vw;

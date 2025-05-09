@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Magdalena Rosen',
+  title: 'Magdalena Roson',
   description: 'Magdalena Roson - Art Director',
 };
 

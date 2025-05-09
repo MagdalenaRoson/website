@@ -48,7 +48,6 @@ nav {
 }
 
 nav > a {
-  margin: 0 10px;
   align-self: center;
   color: black;
   letter-spacing: 0.13rem;

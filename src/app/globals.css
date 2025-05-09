@@ -221,15 +221,7 @@ body > div > main > section.aboutSection > p {
   max-width: 90vw;
 }
 
-/* .assetCompany {
-  width: 100%;
-} */
-
 @media (max-width: 876px) {
-  /* .informationPage {
-    margin-top: 55px;
-  } */
-
   .aboutSection,
   .contactDetailsSection {
     max-width: 100%;
@@ -243,11 +235,6 @@ body > div > main > section.aboutSection > p {
     justify-content: flex-start;
     padding: 0;
     margin-top: 20px;
-  }
-
-  .carouselImage {
-    /* max-width: 90vw; */
-    max-height: 70vh;
   }
 
   .aboutSection,
@@ -289,16 +276,13 @@ body > div > main > section.aboutSection > p {
     max-width: 50vw;
   }
 
-  /* .customLegend > p {
-    font-size: 0.6rem;
-  } */
-
   .mediaMeta {
     bottom: 0;
     padding: 20px;
   }
 
   .carouselImage {
+    max-height: 65vh;
     max-width: 95vw;
   }
 }
@@ -307,7 +291,7 @@ body > div > main > section.aboutSection > p {
 
 @keyframes blur-in {
   from {
-    filter: blur(4px);
+    filter: blur(2px);
   }
   to {
     filter: blur(0);
@@ -319,16 +303,16 @@ body > div > main > section.aboutSection > p {
     opacity: 1;
   }
   to {
-    filter: blur(4px);
-    opacity: 0.3;
+    filter: blur(2px);
+    opacity: 0;
   }
 }
 
 .blur-in {
-  animation: blur-in 0.2s linear forwards;
+  animation: blur-in 0.4s ease-in forwards;
 }
 .blur-out {
-  animation: blur-out 0.2s linear forwards;
+  animation: blur-out 0.4s ease-out forwards;
 }
 
 @keyframes fadeIn {

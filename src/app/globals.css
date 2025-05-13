@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'BradfordLL-MediumItalic', sans-serif;
+  font-family: 'BradfordLL-MediumItalic', serif;
   overflow-x: hidden;
 }
 
@@ -108,12 +108,12 @@ nav > a {
 }
 
 .customLegend {
-  font-family: 'BradfordLL-RegularItalic', sans-serif;
+  font-family: 'BradfordLL-RegularItalic', serif;
   text-align: right;
 }
 
 .customLegend > p {
-  font-size: clamp(0.45rem, 2vw, 0.8rem);
+  font-size: clamp(0.55rem, 2vw, 0.8rem);
 }
 
 .mediaMeta {
@@ -272,9 +272,9 @@ body > div > main > section.aboutSection > p {
     padding: 0;
   }
 
-  .customLegend {
+  /* .customLegend {
     max-width: 50vw;
-  }
+  } */
 
   .mediaMeta {
     bottom: 0;
@@ -284,6 +284,10 @@ body > div > main > section.aboutSection > p {
   .carouselImage {
     max-height: 65vh;
     max-width: 95vw;
+  }
+
+  .counter {
+    font-size: 1.5rem;
   }
 }
 

@@ -312,7 +312,7 @@ body > div > main > section.aboutSection > p {
   animation: blur-in 0.4s ease-in forwards;
 }
 .blur-out {
-  animation: blur-out 0.4s ease-out forwards;
+  animation: blur-out 0.4s ease-in forwards;
 }
 
 @keyframes fadeIn {

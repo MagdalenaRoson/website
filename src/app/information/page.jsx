@@ -1,4 +1,6 @@
 import React from 'react';
+import { fetchEntries } from '@/app/lib/contenful';
+import Link from 'next/link';
 function TextWithLineBreaks({ text }) {
   const lines = text.split(/\r?\n/);
   return (
@@ -12,25 +14,28 @@ function TextWithLineBreaks({ text }) {
     </>
   );
 }
-import { fetchEntries } from '@/app/lib/contenful';
-import Link from 'next/link';
 
 const Information = async () => {
   const userDetails = await fetchEntries('contactDetails');
-  const { email, about, address, phone, socialMedia } = userDetails[0].fields;
+  const { email, about, address, address2, phone, socialMedia } =
+    userDetails[0].fields;
   const socialmediaLinks = socialMedia.split(',');
 
   return (
     <div className='informationPage'>
       <main className='informationWrapper'>
         <section className='aboutSection'>
-          <TextWithLineBreaks text={about} />
-          <p className='label'>Full portfolio available upon request.</p>
+          <h1 className='aboutTitle'>About</h1>
+          <p className='aboutText'>
+            <TextWithLineBreaks text={about} />
+          </p>
+          <span className='label'>Full portfolio available upon request.</span>
         </section>
 
         <section className='contactDetailsSection'>
+          <h1 className='aboutTitle'>Contact</h1>
           <div className='contactDetails'>
-            <p className='label'>E-MAIL</p>
+            {/* <p className='label'>E:</p> */}
 
             <a className='labelValue' href={`mailto:${email}`}>
               {email}
@@ -38,7 +43,7 @@ const Information = async () => {
           </div>
 
           <div className='contactDetails'>
-            <p className='label'>TELEPHONE</p>
+            {/* <p className='label'>T:</p> */}
 
             <a className='labelValue' href={`tel:${phone}`}>
               +
@@ -52,8 +57,16 @@ const Information = async () => {
                 .join('')}
             </a>
           </div>
+
           <div className='contactDetails'>
-            <p className='label'>INSTAGRAM</p>
+            {/* <p className='label'>A:</p> */}
+
+            <p className='labelValue'>{address}</p>
+            <p className='labelValue'>{address2}</p>
+          </div>
+
+          <div className='contactDetails'>
+            {/* <p className='label'>S:</p> */}
             {socialmediaLinks.map((link, index) => (
               <p key={index}>
                 <Link className='labelValue' href={link} target='_blank'>

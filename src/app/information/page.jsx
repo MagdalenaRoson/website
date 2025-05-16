@@ -34,16 +34,12 @@ const Information = async () => {
         <section className='contactDetailsSection'>
           <h1 className='aboutTitle'>Contact</h1>
           <div className='contactDetails'>
-            {/* <p className='label'>E:</p> */}
-
             <a className='labelValue' href={`mailto:${email}`}>
               {email}
             </a>
           </div>
 
           <div className='contactDetails'>
-            {/* <p className='label'>T:</p> */}
-
             <a className='labelValue' href={`tel:${phone}`}>
               +
               {`${phone}`
@@ -58,20 +54,20 @@ const Information = async () => {
           </div>
 
           <div className='contactDetails'>
-            {/* <p className='label'>A:</p> */}
-
             <p className='labelValue'>{address}</p>
             <p className='labelValue'>{address2}</p>
           </div>
 
-          <div className='contactDetails'>
-            {/* <p className='label'>S:</p> */}
-            {socialmediaLinks.map((link, index) => (
-              <p key={index}>
-                <Link className='labelValue' href={link} target='_blank'>
-                  @{link.replace('https://instagram.com/', '')}
-                </Link>
-              </p>
+          <div className='contactDetails socialMedia'>
+            {socialmediaLinks.map((link) => (
+              <Link
+                key={link}
+                className='labelValue'
+                href={link}
+                target='_blank'
+              >
+                @{link.replace('https://instagram.com/', '')}
+              </Link>
             ))}
           </div>
         </section>

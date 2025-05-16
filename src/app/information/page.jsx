@@ -25,7 +25,6 @@ const Information = async () => {
     <div className='informationPage'>
       <main className='informationWrapper'>
         <section className='aboutSection'>
-          <h1 className='aboutTitle'>About</h1>
           <p className='aboutText'>
             <TextWithLineBreaks text={about} />
           </p>

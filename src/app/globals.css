@@ -168,7 +168,7 @@ nav > a {
 
 .aboutTitle {
   font-size: 1.5rem;
-  padding-bottom: 20px;
+  padding-top: 20px;
   font-family: BradfordLL-RegularItalic;
   letter-spacing: 0.1em;
 }
@@ -200,7 +200,7 @@ nav > a {
 }
 
 .contactDetails {
-  margin-bottom: 30px;
+  margin-top: 20px;
   line-height: 1.3;
 }
 
@@ -220,7 +220,7 @@ nav > a {
 body > div > main > section.aboutSection > span {
   font-family: bradfordLL-RegularItalic;
   font-size: 1rem;
-  margin: 40px 0;
+  margin: 40px 0 0;
 }
 
 .mediaWrapper {

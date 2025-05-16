@@ -37,9 +37,9 @@ const Information = async () => {
             <a className='labelValue' href={`mailto:${email}`}>
               {email}
             </a>
-          </div>
+            {/* </div> */}
 
-          <div className='contactDetails'>
+            {/* <div className='contactDetails'> */}
             <a className='labelValue' href={`tel:${phone}`}>
               +
               {`${phone}`
@@ -51,24 +51,26 @@ const Information = async () => {
                 })
                 .join('')}
             </a>
-          </div>
+            {/* </div> */}
 
-          <div className='contactDetails'>
-            <p className='labelValue'>{address}</p>
-            <p className='labelValue'>{address2}</p>
-          </div>
+            {/* <div className='contactDetails'> */}
+            <div>
+              <p className='labelValue'>{address}</p>
+              <p className='labelValue'>{address2}</p>
+            </div>
 
-          <div className='contactDetails socialMedia'>
-            {socialmediaLinks.map((link) => (
-              <Link
-                key={link}
-                className='labelValue'
-                href={link}
-                target='_blank'
-              >
-                @{link.replace('https://instagram.com/', '')}
-              </Link>
-            ))}
+            <div className='socialMedia'>
+              {socialmediaLinks.map((link) => (
+                <Link
+                  key={link}
+                  className='labelValue'
+                  href={link}
+                  target='_blank'
+                >
+                  @{link.replace('https://instagram.com/', '')}
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
       </main>

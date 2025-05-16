@@ -45,7 +45,7 @@ nav {
 
 nav > a {
   align-self: center;
-  letter-spacing: 0.13rem;
+  /* letter-spacing: 0.13rem; */
   font-size: 1.3rem;
   padding: 0;
 }
@@ -108,7 +108,7 @@ nav > a {
 }
 
 .customLegend > p {
-  font-size: clamp(0.55rem, 2vw, 0.8rem);
+  font-size: clamp(0.55rem, 2vw, 1rem);
 }
 
 .mediaMeta {
@@ -158,8 +158,9 @@ nav > a {
 .informationWrapper {
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: row-reverse;
   padding: 0 25px;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   padding-top: 85px;

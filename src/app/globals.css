@@ -217,6 +217,7 @@ nav > a {
 }
 
 .labelValue {
+  font-family: bradfordLL-MediumItalic;
   font-size: 1.2rem;
   letter-spacing: 0.15rem;
   line-height: 1.3;

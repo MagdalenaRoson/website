@@ -1,0 +1,26 @@
+import React from 'react';
+function TextWithLineBreaks({ text }) {
+  const lines = text.split(/\r?\n/);
+  return (
+    <>
+      {lines.map((line, index) => (
+        <React.Fragment key={index}>
+          {line}
+          {index < lines.length - 1 && <br />}
+        </React.Fragment>
+      ))}
+    </>
+  );
+}
+
+const AboutText = ({ about }) => {
+  return (
+    <section className='aboutSection'>
+      <p className='aboutText'>
+        <TextWithLineBreaks text={about} />
+      </p>
+    </section>
+  );
+};
+
+export default AboutText;

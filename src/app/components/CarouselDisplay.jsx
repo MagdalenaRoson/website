@@ -18,7 +18,7 @@ export default function CarouselDisplay({ items }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [fade, setFade] = useState(true);
   return (
-    <section className='carousel'>
+    <section id='projects' className='carousel'>
       <div className='carousel-wrapper'>
         <div
           className='carousel-click-left'

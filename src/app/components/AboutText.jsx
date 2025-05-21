@@ -15,7 +15,7 @@ function TextWithLineBreaks({ text }) {
 
 const AboutText = ({ about }) => {
   return (
-    <section className='aboutSection'>
+    <section id='information' className='aboutSection'>
       <p className='aboutText'>
         <TextWithLineBreaks text={about} />
       </p>

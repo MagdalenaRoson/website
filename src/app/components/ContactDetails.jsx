@@ -3,11 +3,14 @@ const ContactDetails = ({ email, phone, address, address2, socialMedia }) => {
 
   return (
     <section className='contactDetailsSection'>
-      <h1 className='aboutTitle'>Contact</h1>
       <div className='contactDetails'>
         <a className='labelValue' href={`mailto:${email}`}>
-          {email}
+          <span className='italicHover'>{email}</span>
         </a>
+        <div>
+          <p className='labelValue'>{address}</p>
+          <p className='labelValue'>{address2}</p>
+        </div>
         <a className='labelValue' href={`tel:${phone}`}>
           +
           {`${phone}`
@@ -19,15 +22,12 @@ const ContactDetails = ({ email, phone, address, address2, socialMedia }) => {
             })
             .join('')}
         </a>
-        <div>
-          <p className='labelValue'>{address}</p>
-          <p className='labelValue'>{address2}</p>
-        </div>
-
         <div className='socialMedia'>
           {socialmediaLinks.map((link) => (
             <a key={link} className='labelValue' href={link} target='_blank'>
-              @{link.replace('https://instagram.com/', '')}
+              <span className='italicHover'>
+                @{link.replace('https://instagram.com/', '')}
+              </span>
             </a>
           ))}
         </div>

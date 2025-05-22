@@ -17,6 +17,7 @@ const AboutText = ({ about }) => {
   return (
     <section id='information' className='aboutSection'>
       <p className='aboutText'>
+        <span className='name'>Magdalena Roson </span>
         <TextWithLineBreaks text={about} />
       </p>
     </section>

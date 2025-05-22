@@ -23,14 +23,16 @@ export default async function Home() {
     <>
       <Navbar />
       <CarouselDisplay items={sortedAssets} />
-      <AboutText about={about} />
-      <ContactDetails
-        email={email}
-        phone={phone}
-        address={address}
-        address2={address2}
-        socialMedia={socialMedia}
-      />
+      <main>
+        <AboutText about={about} />
+        <ContactDetails
+          email={email}
+          phone={phone}
+          address={address}
+          address2={address2}
+          socialMedia={socialMedia}
+        />
+      </main>
     </>
   );
 }

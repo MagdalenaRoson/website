@@ -40,6 +40,8 @@ body.no-scroll {
   font-variant: oldstyle-nums;
 }
 
+/* ======================================NAVIGATION */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -68,6 +70,17 @@ nav > a {
   white-space: nowrap;
   font-family: 'BradfordLL-MediumItalic', serif;
 }
+
+.nav-link.active {
+  color: #000;
+}
+
+.nav-link {
+  color: #cecece;
+  transition: color 0.5s ease;
+}
+
+/* ======================================CAROUSEL */
 
 .carousel {
   width: 100vw;

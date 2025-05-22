@@ -26,8 +26,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'BradfordLL-Medium', serif;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 body.no-scroll {
@@ -172,7 +171,7 @@ nav > a {
 /* ======================================info Section */
 
 main {
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
   margin-top: 100px;
   font-size: clamp(1rem, 1.52vw, 2.2rem);
   overflow-y: auto;
@@ -185,7 +184,7 @@ main {
 
 #information {
   scroll-margin-top: 80px;
-  padding: 30px 20px 0;
+  padding: 0 20px;
 }
 
 .aboutText {
@@ -193,7 +192,7 @@ main {
   text-align: center;
   width: 60vw;
   max-width: 1250px;
-  margin: 80px auto 0;
+  margin: 0 auto;
   line-height: 1.2;
 }
 
@@ -204,7 +203,7 @@ main {
 /* ======================================CONTACT DETAILS */
 
 .contactDetailsSection {
-  padding: 80px 20px;
+  padding: 80px 20px 0;
   text-align: center;
   line-height: 1.2;
 }
@@ -325,12 +324,16 @@ body > div > main > section.aboutSection > span {
 }
 
 @media (max-width: 700px) {
-  .informationWrapper {
+  /* .informationWrapper {
     flex-direction: column;
     width: 100vw;
     justify-content: flex-start;
     padding: 0 10px;
     margin-top: 20px;
+  } */
+
+  main {
+    padding-bottom: 200px;
   }
 
   .aboutSection,
@@ -374,8 +377,19 @@ body > div > main > section.aboutSection > span {
   }
 
   .aboutText {
-    margin-top: 50px;
+    margin-top: 40px;
     width: 100%;
+  }
+
+  .contactDetails {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    gap: 10px;
+  }
+
+  .socialMedia {
+    gap: 5px;
   }
 }
 

@@ -14,8 +14,8 @@ export default async function Home() {
     contactDetails[0].fields;
 
   const sortedAssets = assets.slice().sort((a, b) => {
-    const numA = Number(a.fields.media.fields.title.match(/^\d+/)[0]);
-    const numB = Number(b.fields.media.fields.title.match(/^\d+/)[0]);
+    const numA = Number(a.fields.orderNumber);
+    const numB = Number(b.fields.orderNumber);
     return numA - numB;
   });
 

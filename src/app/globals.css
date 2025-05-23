@@ -18,6 +18,15 @@
   src: url('/BradfordLL-Medium.otf');
 }
 
+@font-face {
+  font-family: BradfordLL-BookItalic;
+  src: url('/BradfordLL-BookItalic.otf');
+}
+@font-face {
+  font-family: BradfordLL-Book;
+  src: url('/BradfordLL-Book.otf');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -68,7 +77,7 @@ nav > a {
   margin: 0;
   font-size: clamp(1.4rem, 4vw, 1.75rem);
   white-space: nowrap;
-  font-family: 'BradfordLL-MediumItalic', serif;
+  font-family: 'BradfordLL-BookItalic', serif;
 }
 
 .nav-link.active {

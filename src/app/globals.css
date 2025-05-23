@@ -65,7 +65,7 @@ nav {
 
 nav > a {
   align-self: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0;
 }
 
@@ -78,6 +78,7 @@ nav > a {
   font-size: clamp(1.4rem, 4vw, 1.75rem);
   white-space: nowrap;
   font-family: 'BradfordLL-BookItalic', serif;
+  letter-spacing: 0.05rem;
 }
 
 .nav-link.active {
@@ -226,12 +227,13 @@ main {
 }
 
 .aboutText {
-  font-family: BradfordLL-Medium;
+  font-family: BradfordLL-Book;
   text-align: center;
   width: 60vw;
   max-width: 1250px;
   margin: 0 auto;
   line-height: 1.2;
+  letter-spacing: 0.05rem;
 }
 
 .name {

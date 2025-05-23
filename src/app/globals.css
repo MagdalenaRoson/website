@@ -246,6 +246,7 @@ main {
   padding: 80px 20px 0;
   text-align: center;
   line-height: 1.2;
+  letter-spacing: 0.05rem;
 }
 
 .contactDetails {

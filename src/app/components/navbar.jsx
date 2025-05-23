@@ -12,7 +12,7 @@ const Navbar = () => {
         href='#projects'
         className={`nav-link${activeSection === 'projects' ? ' active' : ''}`}
       >
-        PROJECTS
+        WORK
       </a>
       <h1 className='navbarTitle'>Magdalena Roson</h1>
       <a
